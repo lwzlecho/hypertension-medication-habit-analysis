@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 # ============================================================
 # 全局配置
 # ============================================================
-FILE_PATH = 'D:/data/Output/Enroll_Majorrevision-0726-289-含DM去餐后服用药物-无服药要求.xlsx'
+FILE_PATH = 'yourpath'
 Y_COL = '服药习惯_category'
 SPARSE_THRESHOLD = 20
 
