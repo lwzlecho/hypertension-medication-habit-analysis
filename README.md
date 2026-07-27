@@ -1,34 +1,31 @@
 # Hypertension Medication Habit Analysis
 
-Community-dwelling hypertensive patients' medication habits: associated factors and blood pressure control — a cross-sectional study with logistic regression and sensitivity analyses.
+Factors associated with medication habits (fasting vs. postprandial administration) among community-dwelling hypertensive patients — a cross-sectional study with univariable and multivariable logistic regression
 
 ## Background
 
-This study investigates factors associated with medication habits (fasting vs. postprandial administration) among community-dwelling hypertensive patients and their association with blood pressure control, based on data from the National Basic Public Health Service Program in Guangzhou, China (2026).
+This study investigates factors associated with medication habits (fasting vs. postprandial administration) among community-dwelling hypertensive patients, based on data from the National Basic Public Basic Public Health Service Program in Guangzhou, China (2026). A cross-sectional design was employed, using univariable analysis (χ² tests) and multivariable logistic regression to identify factors independently associated with medication habits, followed by comprehensive model credibility checks.
 
 ## Methods
 
-- **Study design**: Cross-sectional analysis of 723 hypertensive patients
-- **Primary outcome**: Medication habit (fasting = 1, postprandial = 0)
-- **Statistical methods**: Univariable and multivariable logistic regression, propensity score matching (PSM), inverse probability weighting (IPW), E-value sensitivity analysis
-- **Software**: Python (Statsmodels, Scipy)
-
-## Key Findings
-
-- Male sex was independently associated with fasting medication habit (adjusted OR = 1.608, 95% CI: 1.177–2.197)
-- Left-arm SBP showed a negative association with fasting habit (OR = 0.821 per 10 mmHg), but robustness was limited (E-value = 1.746 < sex effect OR = 1.942)
-- Medication habit was not significantly associated with blood pressure control categories
+Study design: Cross-sectional analysis
+Primary outcome: Medication habit (fasting = 0, postprandial = 1)
+Statistical methods:
+Baseline characteristics table (Table 1): χ² tests for categorical variables, Welch's t-test for continuous variables
+Univariable analysis: χ² tests for categorical variables, with automatic exclusion of sparse categories (threshold < 20)
+Multivariable logistic regression: full-variable model with automatic detection and exclusion of complete separation variables
+Model credibility checks: Hosmer-Lemeshow goodness-of-fit test, ROC curve & AUC, multicollinearity (VIF), Link Test for model specification, residual analysis & outlier detection, comprehensive rating
+Software: Python (Statsmodels, Scipy, Scikit-learn)
 
 ## Repository Structure
 
-├── analysis_script.py          # Main statistical analysis
-├── visualization_script.py     # Publication-quality figures
-├── requirements.txt            # Python dependencies
+├── data_analysis_20260727.py          
+├── requirements.txt            
 └── README.md
 
 ## Requirements
 
-pip install pandas numpy statsmodels scipy matplotlib seaborn openpyxl
+pip install pandas numpy statsmodels scipy scikit-learn openpyxl
 
 ## License
 
